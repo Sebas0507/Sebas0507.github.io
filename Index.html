@@ -1,0 +1,206 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="styles.css">  
+    <title>Guate Fauna</title> 
+    <style>
+        body {  
+            font-family: Arial, sans-serif;  
+            background-color: #000;  
+            color: #fff;  
+            margin: 0;  
+        }  
+        footer{
+            background-color: #000; 
+            align-items: center; 
+        }
+
+        header {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            padding: 20px;  
+            background-color: #1a1a1a;  
+        }  
+
+        .logo {  
+            font-size: 24px;  
+            font-weight: bold;  
+        }
+
+        .imagen {
+             margin-left: -500px;
+        }  
+
+        nav ul {  
+            list-style: none;  
+            display: flex;  
+            gap: 20px;  
+            padding-left: 0; /* Elimina el padding innecesario */
+        }  
+
+        nav ul li {  
+            cursor: pointer;  
+        }  
+
+        ul li a {  
+            position: relative;  
+            text-decoration: none;  
+            line-height: 1em;  
+            letter-spacing: 2px;  
+            text-transform: uppercase;  
+            color: transparent;  
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);  
+        }  
+
+        ul li a::before {  
+            content: attr(data-text);  
+            position: absolute;  
+            color: var(--clr);  
+            width: 0;  
+            overflow: hidden;  
+            transition: 1s;  
+            border-right: 8px solid var(--clr);  
+            -webkit-text-stroke: 1px var(--clr);  
+        }  
+
+        ul li a:hover::before {  
+            width: 100%;  
+            filter: drop-shadow(0 0 25px var(--clr));  
+        }
+
+        .hero {  
+            text-align: center;  
+            padding: 50px 20px;  
+            background: url('img/lago2.jpg') no-repeat center center/cover; /* Imagen de fondo ajustada */
+            color: #fff;  
+            position: relative; /* Para controlar el contenido sobre el fondo */
+        }  
+
+
+        .hero h1 {  
+            font-size: 36px;  
+        }  
+
+        .hero p {  
+            font-size: 18px;  
+            margin: 20px 0;  
+        }  
+
+        *, *::before, *::after {  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+            font-family: 'Poppins', sans-serif;  
+        }
+
+        hr {
+            border: 1px solid #fff;
+        }
+
+        .parrafo1{
+           width: 50%; /* Controla el ancho del contenido */
+            max-width: 600px; /* Limita el ancho máximo */
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el texto */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left; /* Alinea el texto a la izquierda */
+            margin-left: 0; /* Mueve el contenido hacia la orilla izquierda */
+            margin-right: auto; /* Asegura que el párrafo quede a la izquierda */
+        }
+
+        .parrafo2 {
+            width: 50%; /* Controla el ancho del contenido */
+            max-width: 600px; /* Limita el ancho máximo */
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el texto */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center; /* Alinea el texto al centro */
+            position: absolute; /* Posición absoluta para controlar el lugar exacto */
+            top: 50%; /* Ajusta la posición vertical */
+            right: 50px; /* Ajusta la posición horizontal */
+            transform: translateY(-50%); /* Centra verticalmente en la mitad de la pantalla */
+        }
+
+
+        .titulo{
+           width: 50%; /* Controla el ancho del contenido */
+            max-width: 600px; /* Limita el ancho máximo */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left; /* Alinea el texto a la izquierda */
+            margin-left: 0; /* Mueve el contenido hacia la orilla izquierda */
+            margin-right: auto; /* Asegura que el párrafo quede a la izquierda */
+        }
+
+        .redes{
+         margin-left: 1200px;    
+        }
+
+        .redes2{
+         margin-left: 1080px; 
+         margin-bottom: -25px;   
+        }
+        
+
+ 
+    </style>
+
+
+</head>    
+<body>  
+    <header>  
+        <div class="logo">Guatemala Fauna</div>
+        <img class="imagen" width="30px" src="img/logo.png" alt="Logo"> 
+        <nav>
+            <ul>
+                <li style="--clr:#00ade1">
+                    <a href="Index.html" data-text="&nbsp;Inicio">&nbsp;Inicio&nbsp;</a>
+                </li>
+                <li style="--clr:#ff6493">
+                    <a href="comida.html" data-text="&nbsp;Comidas">&nbsp;Comidas&nbsp;</a>
+                </li>
+                <li style="--clr:#0033a0">
+                    <a href="tradiciones.html" data-text="&nbsp;Tradiciones">&nbsp;Tradiciones&nbsp;</a>
+                </li>
+                <li style="--clr:#008d6b">
+                    <a href="costumbres.html" data-text="&nbsp;Costumbres">&nbsp;Costumbres&nbsp;</a>
+                </li>
+            </ul> 
+        </nav> 
+    </header>  
+    <hr> 
+    <section class="hero">  
+        <h1 class="titulo">Datos Sobre Izabal</h1>  
+        <p class="parrafo1"> Izabal, un departamento en el noreste de Guatemala, destaca por su costa caribeña y el lago de Izabal, el más grande del país. Es famoso por el Castillo de San Felipe, construido para defenderse de los piratas en la época colonial, y por su rica biodiversidad, con selvas tropicales y ríos. Es una región clave para el turismo y la cultura, con influencia de comunidades indígenas y afrodescendientes.
+
+        <h2 class="titulo">Indenpendencia de Izabal</h2>
+        <p class="parrafo1">Izabal, como el resto de Guatemala, celebra la independencia el 15 de septiembre, tras la firma del Acta de Independencia en 1821. Aunque no fue un escenario clave en los eventos que llevaron a la ruptura con España, la región desempeñó un rol importante en el desarrollo posterior de la nación.
+
+
+        <p class="parrafo2"> Si quieres saber mas sobre La Indenpendencia de Izabal tipo Desfiles o historia vea el video aqui abajo:
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tqXZJCKiubY?si=TsLbKNGvCqhDIPN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section> 
+
+
+    <footer>
+        <h3> Copyright de: Diego Lopez C4A</h3>
+        <p class="redes2">redes sociales: 
+    <div class="redes"> 
+        <nav>
+            <a href="https://www.instagram.com/" target="_blank" >
+                <img src="img/insta.ico" width="30px" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/?locale=es_LA" target="_blank" >
+                <img src="img/face.ico" width="30px" alt="Facebook">
+            </a>
+            <a href="https://x.com/?lang=es&mx=2" target="_blank" >
+                <img src="img/x.jpg"    width="30px"   alt="Twitter">
+            </a>
+        </nav>
+    </div>
+    </footer> 
+</body>  
+</html>

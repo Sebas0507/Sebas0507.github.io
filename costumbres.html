@@ -1,0 +1,266 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="styles.css">  
+    <title>Guate Fauna</title> 
+    <style>
+        body {  
+            font-family: Arial, sans-serif;  
+            background-color: #000;  
+            color: #fff;  
+            margin: 0;  
+        }  
+        footer{
+            background-color: #000; 
+            align-items: center; 
+        }
+
+        header {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            padding: 20px;  
+            background-color: #1a1a1a;  
+        }  
+
+        .logo {  
+            font-size: 24px;  
+            font-weight: bold;  
+        }
+
+        .imagen {
+             margin-left:-500px;
+        }  
+
+        .pequeño{
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        nav ul {  
+            list-style: none;  
+            display: flex;  
+            gap: 20px;  
+            padding-left: 0; /* Elimina el padding innecesario */
+        }  
+
+        nav ul li {  
+            cursor: pointer;  
+        }  
+
+        ul li a {  
+            position: relative;  
+            text-decoration: none;  
+            line-height: 1em;  
+            letter-spacing: 2px;  
+            text-transform: uppercase;  
+            color: transparent;  
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);  
+        }  
+
+        ul li a::before {  
+            content: attr(data-text);  
+            position: absolute;  
+            color: var(--clr);  
+            width: 0;  
+            overflow: hidden;  
+            transition: 1s;  
+            border-right: 8px solid var(--clr);  
+            -webkit-text-stroke: 1px var(--clr);  
+        }  
+
+        ul li a:hover::before {  
+            width: 100%;  
+            filter: drop-shadow(0 0 25px var(--clr));  
+        }
+
+        .hero {  
+            text-align: center;  
+            padding: 50px 20px;  
+            background: url('img/lago2.jpg') no-repeat center center/cover; /* Imagen de fondo ajustada */
+            color: #fff;  
+            position: relative; /* Para controlar el contenido sobre el fondo */
+        }  
+
+
+
+        .hero h1 {  
+            font-size: 36px;  
+        }  
+
+        .hero p {  
+            font-size: 18px;  
+            margin: 20px 0;  
+        }  
+
+        *, *::before, *::after {  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+            font-family: 'Poppins', sans-serif;  
+        }
+
+        hr {
+            border: 1px solid #fff;
+        }
+
+        .parrafo1{
+           width: 100%; /* Controla el ancho del contenido */
+            
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el texto */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .negro{
+            color:black;
+        }
+
+        .titulo{
+           width: 50%; /* Controla el ancho del contenido */
+            max-width: 600px; /* Limita el ancho máximo */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left; /* Alinea el texto a la izquierda */
+            margin-left: 0; /* Mueve el contenido hacia la orilla izquierda */
+            margin-right: auto; /* Asegura que el párrafo quede a la izquierda */
+        }
+
+        .redes{
+         margin-left: 1200px;    
+        }
+
+        .redes2{
+         margin-left: 1080px; 
+         margin-bottom: -25px;   
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .card-container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap; /* Evita que los elementos se ajusten en varias filas */
+            margin-top: 100px
+        }
+
+        .card{
+            width: 325px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+            margin: 20px;
+        }
+
+        .card img{
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content{
+            padding: 16px;
+        }
+
+        .card-content h3{
+            font-size: 28px;
+            margin-bottom: 8px
+        }
+
+        .card-content p{
+            color: #666;
+            font-size: 15px;
+            line-height: 1.3;
+        }
+        
+        .card-content .btn{
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 16px;
+            color: #fff;
+        }
+
+ 
+    </style>
+</head>    
+<body>  
+    <header>  
+        <div class="logo">Guatemala Fauna</div>
+        <img class="imagen" width="30px" src="img/logo.png" alt="Logo"> 
+        <nav>
+            <ul>
+                <li style="--clr:#00ade1">
+                    <a href="Index.html" data-text="&nbsp;Inicio">&nbsp;Inicio&nbsp;</a>
+                </li>
+                <li style="--clr:#ff6493">
+                    <a href="comida.html" data-text="&nbsp;Comidas">&nbsp;Comidas&nbsp;</a>
+                </li>
+                <li style="--clr:#0033a0">
+                    <a href="tradiciones.html" data-text="&nbsp;Tradiciones">&nbsp;Tradiciones&nbsp;</a>
+                </li>
+                <li style="--clr:#008d6b">
+                    <a href="costumbres.html" data-text="&nbsp;Costumbres">&nbsp;Costumbres&nbsp;</a>
+                </li>
+            </ul> 
+        </nav> 
+    </header>  
+    <hr> 
+    <section class="hero">
+        <h1>Costumbres</h1>
+        <p class="parrafo1">Izabal, Guatemala, es famoso por la Feria de la Candelaria, su gastronomía como el pepián, música de marimba y danzas, y la pesca, que refleja sus tradiciones culturales, Aqui te mostraremos 3 grandes ejemplos de sus hermosas costumbres: 
+       <div class="card-container">
+           <div class="card">
+            <img src="img/danza.jpg">
+            <div class="card-content">
+                <h3>Danzas</h3>
+                <p>Las danzas garífunas se presentan en Livingston, destacando El Yancunú, El Sambai, La Punta, La Samba y El Jungujugu. La población Q’eqchi’ practica la danza Del Venado, la Danza del Tun y la del cortez en Livingston y El Estor.
+                <a href="https://www.deguate.com/arte-cultura/danza-guatemala/danzas-folkloricas-de-izabal.shtml" class="btn" target="_blank">Leer mas</a>
+            </div>     
+           </div>
+           <div class="card">
+            <img src="img/pesca.jpg">
+            <div class="card-content">
+                <h3>Prácticas de pesca</h3>
+                <p>La pesca es una parte fundamental de la vida en Izabal, con tradiciones que incluyen el uso de canoas y redes, especialmente en el Lago de Izabal y el río Dulce.
+                <a href="https://iucn.org/es/articulo/202311/pescadores-artesanales-de-izabal-guatemala-promueven-pesca-sostenible-para-una" class="btn" target="_blank">Leer mas</a>
+            </div>     
+           </div>
+           <div class="card">
+            <img src="img/comida.jpg">
+            <div class="card-content">
+                <h3>Tradiciones culinarias</h3>
+                <p>La gastronomía de Izabal es rica y variada, con platos como el "pepían" y el "pescado en escabeche", reflejando la influencia de las culturas indígenas y mestizas.
+                <a href="https://imperiochapin.com/gastronomia/izabal/" class="btn" target="_blank">Leer mas</a>
+            </div>     
+           </div>
+       </div>
+    </section> 
+    <footer>
+        <h3> Copyright de: Diego Lopez C4A</h3>
+        <p class="redes2">redes sociales: 
+    <div class="redes"> 
+        <nav>
+            <a href="https://www.instagram.com/" target="_blank" >
+                <img src="img/insta.ico" width="30px" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/?locale=es_LA" target="_blank" >
+                <img src="img/face.ico" width="30px" alt="Facebook">
+            </a>
+            <a href="https://x.com/?lang=es&mx=2" target="_blank" >
+                <img src="img/x.jpg"    width="30px"   alt="Twitter">
+            </a>
+        </nav>
+    </div>
+    </footer> 
+</body>  
+</html>

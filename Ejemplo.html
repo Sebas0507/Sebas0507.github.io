@@ -1,0 +1,179 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="styles.css">  
+    <title>Muhilan Org - Landing Page</title>  
+</head>  
+<body>  
+    <header>  
+        <div class="logo">Guatemala Fauna</div><img id="imagen" src="img/quetzal.png" width="50px">
+        <nav>
+            <ul>
+             <li style="--clr:#00ade1">
+                 <a href="proyecto.html" data-text="&nbsp;Inicio">&nbsp;Inicio&nbsp;</a>
+             </li>
+             <li style="--clr:#ff6493">
+                 <a href="comida.html" data-text="&nbsp;Comidas">&nbsp;Comidas&nbsp;</a>
+             </li>
+            <li style="--clr:#0033a0">
+                 <a href="#" data-text="&nbsp;Tradiciones">&nbsp;Tradiciones&nbsp;</a>
+             </li>
+             <li style="--clr:#008d6b">
+                 <a href="#" data-text="&nbsp;costumbres">&nbsp;costumbres&nbsp;</a>
+            
+             <li style="--clr:#f2b700">
+                 <a href="#" data-text="&nbsp;Municipios">&nbsp;Municipios&nbsp;</a>
+             </li>
+           
+                 <li style="--clr:#6b8e23 ">
+                 <a href="#" data-text="&nbsp;Fiestas Patrias">&nbsp;Fiestas Patrias&nbsp;</a>
+             </li>
+            </ul> 
+        </nav> 
+    </header>  
+    <hr>
+    <main>  
+        <section class="hero">  
+            <h1>Elevate your Gaming with our Premium PlayStation 5</h1>  
+            <p>Discover a world of gaming excellence with access to a vast library of PlayStation titles spanning generations...</p>  
+        </section>  
+        <section class="product-image">  
+            <img src="headphones.jpg" alt="Premium Headphones">  
+        </section>  
+    </main>  
+</body>  
+</html> 
+
+<style type="text/css">
+    body {  
+    font-family: Arial, sans-serif;  
+    background-color: #000;  
+    color: #fff;  
+    margin: 0;  
+}  
+
+header {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 20px;  
+    background-color: #1a1a1a;  
+}  
+
+.logo {  
+    font-size: 24px;  
+    font-weight: bold;  
+}  
+
+.imagen{
+    padding-left:-200px;
+}
+
+nav ul {  
+    list-style: none;  
+    display: flex;  
+    gap: 20px;  
+}  
+
+nav ul li {  
+    cursor: pointer;  
+}  
+
+.sign-in {  
+    background-color: #007bff;  
+    color: white;  
+    border: none;  
+    padding: 10px 15px;  
+    border-radius: 5px;  
+}  
+
+.hero {  
+    text-align: center;  
+    padding: 50px 20px;  
+    background: linear-gradient(180deg, #1a1a1a, #003366);  
+}  
+
+.hero h1 {  
+    font-size: 36px;  
+}  
+
+.hero p {  
+    font-size: 18px;  
+    margin: 20px 0;  
+}  
+
+.get-started, .shop-now {  
+    background-color: #007bff;  
+    color: white;  
+    border: none;  
+    padding: 15px 25px;  
+    border-radius: 5px;  
+    margin: 10px;  
+    cursor: pointer;  
+}  
+
+.product-image {  
+    text-align: center;  
+    margin: 20px 0;  
+}  
+
+.product-image img {  
+    max-width: 100%;  
+    height: auto;  
+}
+
+*.{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+ul {
+    position: relative;
+    display: flex;
+    text-align: left;
+    padding-top: 0; /* Elimina el padding-top si no lo necesitas */
+    flex-direction: row; /* Cambia de column a row */
+    gap: 30px;
+    font-size: 0.9em;
+    justify-content: center; /* Opcional: Para centrar el contenido en horizontal */
+}
+
+
+        ul li {
+            position: relative;
+            list-style: none;
+        }
+
+        ul li a{
+            position: relative;
+            
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke:1px rgba(255,255,255,0.5);
+
+        }
+
+        ul li a::before{
+            content: attr(data-text);
+            position: absolute;
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: 1s;
+            border-right: 8px solid var(--clr);
+            -webkit-text-stroke: 1px var(--clr);
+        }
+
+        ul li a:hover::before{
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(--clr));
+        }
+
+</style>

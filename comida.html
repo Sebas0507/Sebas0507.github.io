@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guate Fauna</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .imagen {
+            margin-left: -500px;
+        }
+
+
+    .img{
+        margin-bottom: 300px;
+    }
+
+    .img2{
+        margin-bottom: 350px;
+    }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding-left: 0;
+        }
+
+        nav ul li {
+            cursor: pointer;
+        }
+
+        ul li a {
+            position: relative;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+        }
+
+        ul li a::before {
+            content: attr(data-text);
+            position: absolute;
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: 1s;
+            border-right: 8px solid var(--clr);
+            -webkit-text-stroke: 1px var(--clr);
+        }
+
+        ul li a:hover::before {
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(--clr));
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: url('img/lago2.jpg') no-repeat center center/cover;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        hr {
+            border: 1px solid #fff;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            background: url('img/lago2.jpg') no-repeat center center/cover;
+        }
+
+        .titulo{
+           padding-bottom: -100px;
+        }
+
+        .parrafo1{
+           width: 100%; /* Controla el ancho del contenido */
+            max-width: 600px; /* Limita el ancho máximo */
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el texto */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left; /* Alinea el texto a la izquierda */
+            margin-left: 0; /* Mueve el contenido hacia la orilla izquierda */
+            margin-right: auto; /* Asegura que el párrafo quede a la izquierda */
+        }
+
+        .redes{
+         margin-left: 1200px;    
+        }
+
+        .redes2{
+         margin-left: 1050px; 
+         margin-bottom: -25px;   
+        }
+
+        .text-content {
+            width: 45%;
+        }
+
+        .text-content h3 {
+            margin-top: 0;
+        }
+
+        .gallery-container {
+            padding: 75px 0;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .gallery-wrap {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 300px; /* Ajusta la altura según tus necesidades */
+        }
+
+        .item {
+            flex: 1;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: flex 0.8s ease; /* Asegúrate de que el cambio de tamaño sea animado */
+        }
+
+        .item:hover {
+            flex: 5;
+        }
+
+        .item:nth-of-type(1) {
+            background-image: url('img/pan5.jpg');
+        }
+
+        .item:nth-of-type(2) {
+            background-image: url('img/pan2.jpg');
+        }
+
+        .item:nth-of-type(3) {
+            background-image: url('img/pan3.jpg');
+        }
+
+        .item:nth-of-type(4) {
+            background-image: url('img/pan4.jpg');
+        }
+
+        .gallery-container1 {
+            padding: 75px 0;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .gallery-wrap1 {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 300px; /* Ajusta la altura según tus necesidades */
+        }
+
+        .item1 {
+            flex: 1;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: flex 0.8s ease; /* Asegúrate de que el cambio de tamaño sea animado */
+        }
+
+        .item1:hover {
+            flex: 5;
+        }
+
+        .item1:nth-of-type(1) {
+            background-image: url('img/tamal.jpg');
+        }
+
+        .item1:nth-of-type(2) {
+            background-image: url('img/tamal2.jpg');
+        }
+
+        .item1:nth-of-type(3) {
+            background-image: url('img/tamal3.jpg');
+        }
+
+        .item1:nth-of-type(4) {
+            background-image: url('img/tamal4.jpg');
+        }
+
+
+        .gallery-container2 {
+            padding: 75px 0;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .gallery-wrap2 {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 300px; /* Ajusta la altura según tus necesidades */
+        }
+
+        .item2 {
+            flex: 1;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: flex 0.8s ease; /* Asegúrate de que el cambio de tamaño sea animado */
+        }
+
+        .item2:hover {
+            flex: 5;
+        }
+
+        .item2:nth-of-type(1) {
+            background-image: url('img/tapa.jpg');
+        }
+
+        .item2:nth-of-type(2) {
+            background-image: url('img/tapa2.jpg');
+        }
+
+        .item2:nth-of-type(3) {
+            background-image: url('img/tapa3.jpg');
+        }
+
+        .item2:nth-of-type(4) {
+            background-image: url('img/tapa4.jpg');
+        }
+
+
+        .video-content {
+            width: 45%;
+            background-color:  #1a1a1a;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            height: 300px; /* Ajusta la altura según tus necesidades */
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #000; 
+            align-items: center; 
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        .redes {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Guatemala Fauna</div>
+        <img class="imagen" width="30px" src="img/logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li style="--clr:#00ade1"><a href="Index.html" data-text="&nbsp;Inicio">&nbsp;Inicio&nbsp;</a></li>
+                <li style="--clr:#ff6493"><a href="comida.html" data-text="&nbsp;Comidas">&nbsp;Comidas&nbsp;</a></li>
+                <li style="--clr:#0033a0"><a href="tradiciones.html" data-text="&nbsp;Tradiciones">&nbsp;Tradiciones&nbsp;</a></li>
+                <li style="--clr:#008d6b"><a href="costumbres.html" data-text="&nbsp;Costumbres">&nbsp;Costumbres&nbsp;</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <section>
+        <h2>Platos Más Populares de Izabal</h2>
+    </section>
+
+    <div class="main-content">
+        <div class="text-content">
+            <article>
+                <h3 class="titulo">Pan de Coco</h3>
+                <p class="parrafo1">El Pan de Coco es un platillo básico en Izabal. Un pan tierno y ligeramente dulce, elaborado con harina, levadura, agua y coco rallado. Se cocina a fuego lento hasta que adquiere un tono dorado y una textura crujiente.</p>
+            </article>
+
+            <div class="gallery-container">
+                <div class="gallery-wrap">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+
+            <h3  class="titulo">Tamales de Cambray</h3>
+            <p class="parrafo1">Los Tamales de Cambray son una delicia de la región. Con una combinación de pollo, carne de cerdo, tomates frescos y especias, estos tamales son envueltos en hojas de plátano y luego cocidos al vapor.</p>
+
+            <div class="gallery-container1">
+                <div class="gallery-wrap1">
+                    <div class="item1"></div>
+                    <div class="item1"></div>
+                    <div class="item1"></div>
+                    <div class="item1"></div>
+                </div>
+            </div>
+
+            <h3>Tapado Izabalense</h3>
+            <p class="parrafo1">El Tapado Izabalense es un guiso de mariscos y pescados servido en un caldo a base de coco y plátano. Es un festín de sabores y colores que rinde homenaje a la biodiversidad de la región.</p>
+
+            <div class="gallery-container2">
+                <div class="gallery-wrap2">
+                    <div class="item2"></div>
+                    <div class="item2"></div>
+                    <div class="item2"></div>
+                    <div class="item2"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-content">
+            <h3>Videos Relacionados</h3>
+            <p class="img2"><iframe width="560" height="315" src="https://www.youtube.com/embed/bL-vu4khL5A?si=XtGdbzLKdahtDWUc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+           <p class="img"> <iframe width="560" height="315" src="https://www.youtube.com/embed/BbD2zFHsHME?si=mTCljKHNUSAX1Nmu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+           <p > <iframe width="560" height="315" src="https://www.youtube.com/embed/VnpTI_YQILc?si=qvAOp1RGNOw7GnqS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+            
+        </div>
+    </div>
+
+    <footer>
+        <h3>Copyright de: Diego Lopez C4A</h3>
+        <p class="redes2">Redes sociales:</p>
+        <div class="redes">
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/insta.ico" width="30px" alt="Instagram"></a>
+            <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="img/face.ico" width="30px" alt="Facebook"></a>
+            <a href="https://x.com/?lang=es&mx=2" target="_blank"><img src="img/x.jpg" width="30px" alt="Twitter"></a>
+        </div>
+    </footer>
+</body>
+</html>
